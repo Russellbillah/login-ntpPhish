@@ -1,0 +1,248 @@
+/* assets/app.css */
+
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh; /* Use min-height to allow content to push footer down */
+    margin: 0;
+    padding: 20px; /* Add some padding for smaller screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Authentication Wrapper */
+.auth-wrapper {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 2px; /* Microsoft often uses very subtle rounded corners or none */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 440px; /* Standard Microsoft login page width */
+    text-align: left; /* Microsoft login page is left-aligned */
+    margin: auto; /* Center the box */
+}
+
+/* Display Utilities */
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+/* Spacing Utilities */
+.mb-0 { margin-bottom: 0 !important; }
+.mb-16 { margin-bottom: 16px !important; }
+.mt-16 { margin-top: 16px !important; }
+.w-100 { width: 100% !important; }
+
+/* Text Styling */
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1b1b1b;
+    margin-bottom: 20px;
+}
+
+.p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.fs-13 {
+    font-size: 13px !important;
+}
+
+/* Input Fields */
+.input {
+    width: 100%;
+    padding: 10px 8px;
+    margin-bottom: 5px; /* Adjust margin as needed */
+    border: 1px solid #c9c9c9;
+    border-radius: 0; /* Microsoft inputs are usually sharp */
+    box-sizing: border-box; /* Include padding in width */
+    font-size: 15px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #0067b8; /* Microsoft blue border on focus */
+    box-shadow: 0 0 0 1px #0067b8; /* Subtle blue shadow on focus */
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #0067b8; /* Microsoft blue */
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block; /* For button group alignment */
+}
+
+.btn:hover {
+    background-color: #0056a3; /* Darker blue on hover */
+}
+
+.btn-sec { /* For secondary buttons like 'No' on stay signed in page */
+    background-color: #e6e6e6;
+    color: #1b1b1b;
+    border: 1px solid #c9c9c9;
+}
+
+.btn-sec:hover {
+    background-color: #d9d9d9;
+    border-color: #b3b3b3;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between; /* Space out buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.btn-group .btn {
+    width: auto; /* Allow buttons to size based on content */
+    flex-grow: 1; /* Make them grow to fill space */
+}
+
+/* Links */
+.link {
+    color: #0067b8; /* Microsoft blue for links */
+    text-decoration: none;
+    font-size: 13px; /* Default font size for links */
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Error Messages */
+.error {
+    color: #e81123; /* Microsoft red for errors */
+    font-size: 12px;
+    margin-top: -10px; /* Pull error message closer to input */
+    margin-bottom: 5px;
+    display: none; /* Hidden by default, shown by JS */
+}
+
+/* Checkbox */
+.has-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #333;
+}
+
+.has-checkbox input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px; /* Adjust size if needed */
+    height: 16px;
+}
+
+/* Identity section for password step */
+.identity {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #1b1b1b;
+    font-weight: 600;
+}
+
+.identity .back {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.identity .back img {
+    width: 20px; /* Adjust size of back arrow */
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Options/Footer styling */
+.opts {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 440px; /* Match auth-wrapper width */
+    text-align: left;
+    display: flex; /* For icon alignment */
+    align-items: center;
+    color: #333;
+}
+
+.opts .has-icon {
+    display: flex;
+    align-items: center;
+}
+
+.opts .icon {
+    margin-right: 10px;
+    display: flex;
+    align-items: center; /* Vertically align icon */
+}
+
+.opts .icon img {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+}
+
+
+.footer {
+    width: 100%;
+    max-width: 440px; /* Match main content width */
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+    gap: 15px; /* Space between links */
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.footer a {
+    color: #333; /* Darker links in footer */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer span {
+    color: #333;
+}
+
+/* Specific image adjustments */
+.auth-wrapper > img { /* Target Microsoft logo at the top */
+    width: 120px; /* Adjust size if needed */
+    margin-bottom: 20px;
+    display: block; /* Ensure it takes its own line */
+}
+
+.auth-wrapper .identity img { /* Back button arrow */
+    width: 20px;
+    height: 20px;
+}
+
+.auth-wrapper .link img { /* Question mark icon next to security key link */
+    width: 16px;
+    height: 16px;
+    vertical-align: middle; /* Align with text */
+    margin-left: 5px;
+}
