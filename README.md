@@ -21,4 +21,4 @@ Quickstart:
 
 Below is a short clip of what this clone looks like
 
-<img src="assets/preview.gif" alt="preview"/>
+<img src="assets/preview.mp4" height="120" width="120" alt="preview"/>
